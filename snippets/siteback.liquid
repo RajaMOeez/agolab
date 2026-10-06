@@ -1,5 +1,5 @@
 <div class="banner-image mb-4">
-  <img src="{{media url=&quot;wysiwyg/smartwave/porto/category/banner/shop20_shop_banner.jpg&quot;}}" alt="" />
+  <img src="{{ media }}" alt="" />
 </div>
 <div class="row">
   <div class="col-lg-3">
@@ -55,7 +55,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-20.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -70,7 +70,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-89-2.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -85,7 +85,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/headphone-3.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -100,7 +100,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-21.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -115,7 +115,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/headphone-1.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -130,7 +130,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/shoes-16-2.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -145,7 +145,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-89-2.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -160,7 +160,7 @@
           <a href="#">
             <span class="thumb-info align-center">
               <span class="thumb-info-wrapper tf-none">
-                <img src="{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/headphone-1.jpg&quot;}}"/>
+                <img src="{{ media }}"/>
               </span>
               <span class="thumb-info-wrap">
                 <span class="thumb-info-title">
@@ -180,7 +180,7 @@
         <span class="line-r"></span>
       </h2>
       <div class="slider-wrapper">
-        {{block class="Smartwave\Filterproducts\Block\Home\LatestList" name="featured_product" extra_class="nav-center-images-only nav-pos-outside nav-style-4 show-nav-hover dots-style-1" product_count="8" aspect_ratio="0" image_width="350" image_height="350" template="owl_list.phtml"}}
+        {{ block }}
         <script type="text/javascript">
           require([
             'jquery',
@@ -219,4 +219,43 @@
       </div>
     </div>
   </div>
-</div>  
+</div>  {%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/category/banner/shop20_shop_banner.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 44..55
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-20.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 2196..2207
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-89-2.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 2796..2807
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/headphone-3.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 3389..3400
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-21.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 3989..4000
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/headphone-1.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 4586..4597
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/shoes-16-2.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 5184..5195
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/product-89-2.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 5778..5789
+- from: "{{media url=&quot;wysiwyg/smartwave/porto/homepage/03/headphone-1.jpg&quot;}}"
+  to: "{{ media }}"
+  position: 6371..6382
+- from: '{{block class="Smartwave\Filterproducts\Block\Home\LatestList" name="featured_product"
+    extra_class="nav-center-images-only nav-pos-outside nav-style-4 show-nav-hover
+    dots-style-1" product_count="8" aspect_ratio="0" image_width="350" image_height="350"
+    template="owl_list.phtml"}}'
+  to: "{{ block }}"
+  position: 7106..7117
+{%- endcomment -%}
